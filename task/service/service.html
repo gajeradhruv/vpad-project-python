@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNC Machining - Futébao</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: white;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .price-protection {
+            background: #2c5aa0;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        .protection-items {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .product-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .product-title {
+            color: #2c5aa0;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .product-description {
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .contact-btn {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background: #1e3f7a;
+        }
+        
+        .brand-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .brand-item {
+            background: #f8f9fa;
+            padding: 30px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #2c5aa0;
+            border: 2px solid #e9ecef;
+        }
+        
+        @media (max-width: 768px) {
+            .brand-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .protection-items {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="price-protection">
+            <div class="protection-items">
+                <span>✓ Price side guarantee</span>
+                <span>✓ 24-hour Customer Service</span>
+            </div>
+        </div>
+        
+        <div class="breadcrumb">
+            Home > Product > CNC Machining
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="product-section">
+            <img src="/assets/your_app/images/contact-banner.jpg"  
+            alt="Contact Banner"
+            style="max-width:100%;height:auto;border-radius:8px;">
+            <h1 class="product-title">CNC Machining</h1>
+            <p class="product-description">
+                Futébao is professional CNC Machining manufacturers and suppliers in China, specialized in providing customized wholesale CNC Machining with wholesale price. To buy CNC Machining from our factory. For quotation, contact us now.
+            </p>
+            <button class="contact-btn" onclick="requestQuote()">Contact Us for Quote</button>
+        </div>
+        
+        <div class="brand-section">
+            <div class="brand-grid">
+                <div class="brand-item">BANCHINYE</div>
+                <div class="brand-item">BANCHINYE</div>
+                <div class="brand-item">BANCHINYE</div>
+                <div class="brand-item">BANCHINYE</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function requestQuote() {
+            alert('Thank you for your interest! Our sales team will contact you shortly with a customized quote.');
+            
+            // Simulate form submission
+            const quoteData = {
+                product: 'CNC Machining',
+                timestamp: new Date().toISOString(),
+                source: 'Website Contact Button'
+            };
+            
+            console.log('Quote requested:', quoteData);
+            
+            // Here you would typically send data to backend
+            sendToBackend(quoteData);
+        }
+        
+        function sendToBackend(data) {
+            // Simulate sending data to Python backend
+            fetch('/api/quote-request', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Backend response:', data);
+            })
+            .catch(error => {
+                console.error('Error sending to backend:', error);
+            });
+        }
+        
+        // Add hover effects
+        document.querySelectorAll('.brand-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                this.style.transition = 'all 0.3s ease';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

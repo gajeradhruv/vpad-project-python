@@ -43,7 +43,30 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Purchase Receipt" : "public/js/purchase_receipt.js"}
+page_js = {"item-performance-das": "public/js/item-performance-das.js"}   
+page_js = {"item-product": "public/js/item_product.js"}
+page = {"product-management-s": "task.task.page.item product.py"}
+page_js = {"product-analytics": "public/js/product_analytics.js"}
+page_html={"product-analytics":"product_analytics/product_analytics.html"}
+page_py={"product-analytics":"product_analytics/product_analytics.py"}   
+page_js = {"invoice-payment-trac": "public/js/invoice_payment_trac.js"}
+page_py={"product-analytics":"invoice_payment_trac/invoice_payment_trac.py"}     
+page_js = {"spare_parts": "public/js/spare_parts.js"}
+# Profit & Loss Report Report
+page_js = { "Profit_&_loss": "public/js/Profit_&_loss.js" }
+page_js = {"payment_history": "public/js/payment_history.js"}
+page_py={"payment_history":"payment_history/payment_history.py"}   
+page_js = {"service": "service/service.js"}
+page_js = {"service": "service/service.html"}
+page_js = {"service": "service/service.py"}
+
+
+
+# page_Html = {"item-performance-das": "public/js/item-performance-das.html"} 
+# page_py={"page":"public/task/dashboard_item.py"}
+# page_js = {"manufacturing-dashboard": "public/js/manufacturing_dashboard.js"}
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -131,9 +154,11 @@ app_license = "mit"
 
 # override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
+
 # }
 
 # Document Events
+
 # ---------------
 # Hook on document methods and events
 
