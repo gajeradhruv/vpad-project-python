@@ -1,0 +1,10 @@
+frappe.pages['service'].on_page_load = function(wrapper) {
+	var page = frappe.ui.make_app_page({
+		parent: wrapper,
+		title: 'service-00020',
+		single_column: true
+	});
+}
+
+
+
